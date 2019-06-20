@@ -1,0 +1,100 @@
+@import "./reset.scss";
+
+$color_1: #262626;
+$color_2: #2e4159;
+$color_3: #8f8ebf;
+$color_4: #4f4d8c;
+$color_5: #474073;
+
+$form-element-height: 56px;
+
+.app {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 1.6em;
+  margin: 2rem auto;
+  max-width: 480px;
+
+  &__title {
+    font-size: 3rem;
+    line-height: 1.6em;
+  }
+
+  &__form {
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  &__input {
+    border: none;
+    border-bottom: solid 2px $color_1;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 16px;
+    height: $form-element-height;
+    line-height: 1.6em;
+    padding-right: 100px;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input-submit {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 16px;
+    height: 42px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+    width: 100px;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      color: #7ebf9a;
+    }
+  }
+
+  &__list {
+  }
+
+  &__list-item {
+    align-items: center;
+    border-bottom: dotted 1px #dedede;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 6px;
+    padding-top: 9px;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  &__list-item-delete {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 12px;
+    height: 42px;
+    padding: 0;
+    text-align: right;
+    width: 100px;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      color: #d93654;
+    }
+  }
+}
