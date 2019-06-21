@@ -3,13 +3,31 @@ import React, { createContext, useReducer } from "react";
 export const Store = createContext();
 
 const initialState = {
-  todos: []
+  list: []
 };
 
 function reducer(state, action) {
   switch (action.type) {
-    case "FETCH_DATA":
-      return { ...state, todos: action.payload };
+    case "CREATE_NEW_LIST_ITEM":
+      const newState = {
+        ...state,
+        list: state.list.concat({
+          createdAt: new Date().toString(),
+          listItemValue: action.payload.listItemValue
+        })
+      };
+
+      console.log(newState);
+      return newState;
+
+    case "DELETE_LIST_ITEM":
+      return {
+        ...state,
+        list: state.list.filter(
+          listItem => listItem.createdAt !== action.payload.createdAt
+        )
+      };
+
     default:
       return state;
   }

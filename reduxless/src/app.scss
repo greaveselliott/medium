@@ -1,24 +1,30 @@
 @import "./reset.scss";
 
 $color_1: #262626;
-$color_2: #2e4159;
-$color_3: #8f8ebf;
-$color_4: #4f4d8c;
-$color_5: #474073;
+$color_2: #bfbbbb;
+$color_positive: #7ebf9a;
+$color_negative: #d93654;
+
+$font-size: 16px;
+$line-height: 1.6em;
 
 $form-element-height: 56px;
 
 .app {
   font-family: "Nanum Myeongjo", serif;
-  font-size: 16px;
-  font-weight: 100;
-  line-height: 1.6em;
+  font-size: $font-size;
+  line-height: $line-height;
   margin: 2rem auto;
   max-width: 480px;
 
   &__title {
     font-size: 3rem;
-    line-height: 1.6em;
+    line-height: $line-height;
+
+    &:after {
+      content: ".";
+      color: $color_positive;
+    }
   }
 
   &__form {
@@ -28,16 +34,17 @@ $form-element-height: 56px;
 
   &__input {
     border: none;
-    border-bottom: solid 2px $color_1;
+    border-bottom: dotted 4px $color_2;
     font-family: "Nanum Myeongjo", serif;
-    font-size: 16px;
+    font-size: $font-size;
     height: $form-element-height;
-    line-height: 1.6em;
+    line-height: $line-height;
     padding-right: 100px;
     width: 100%;
 
     &:focus {
       outline: none;
+      border-color: $color_positive;
     }
   }
 
@@ -47,7 +54,7 @@ $form-element-height: 56px;
     cursor: pointer;
     display: block;
     font-family: "Nanum Myeongjo", serif;
-    font-size: 16px;
+    font-size: $font-size;
     height: 42px;
     padding: 0;
     position: absolute;
@@ -59,7 +66,7 @@ $form-element-height: 56px;
     &:focus,
     &:hover {
       outline: none;
-      color: #7ebf9a;
+      color: $color_positive;
     }
   }
 

@@ -1,9 +1,13 @@
-export const fetchDataAction = async dispatch => {
-  const data = await fetch("https://jsonplaceholder.typicode.com/todos/");
-  const dataJSON = await data.json();
-
+export const createNewListItem = ({ dispatch, payload }) => {
   return dispatch({
-    type: "FETCH_DATA",
-    payload: dataJSON
+    type: "CREATE_NEW_LIST_ITEM",
+    payload
+  });
+};
+
+export const deleteNewListItem = ({ dispatch, payload }) => {
+  return dispatch({
+    type: "DELETE_NEW_LIST_ITEM",
+    payload
   });
 };
