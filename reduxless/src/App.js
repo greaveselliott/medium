@@ -23,11 +23,11 @@ export default function App() {
     }
   };
 
-  const onDeleteListItem = createdAt => {
+  const onDeleteListItem = uuid => {
     deleteNewListItem({
       dispatch,
       payload: {
-        createdAt
+        uuid
       }
     });
   };
@@ -49,7 +49,7 @@ export default function App() {
             {listItem.listItemValue}
             <button
               className="app__list-item-delete"
-              onClick={() => onDeleteListItem(listItem.createdAt)}
+              onClick={() => onDeleteListItem(listItem.uuid)}
             >
               Delete
             </button>

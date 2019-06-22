@@ -1,4 +1,7 @@
 import React, { createContext, useReducer, useDebugValue } from "react";
+import uuid from "web-uuid-js";
+
+window.uuid = uuid;
 
 export const Store = createContext();
 
@@ -9,22 +12,19 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case "CREATE_NEW_LIST_ITEM":
-      const newState = {
+      return {
         ...state,
         list: state.list.concat({
-          createdAt: new Date().getMilliseconds().toString(),
+          uuid: uuid(),
           listItemValue: action.payload.listItemValue
         })
       };
-
-      console.log(newState);
-      return newState;
 
     case "DELETE_LIST_ITEM":
       return {
         ...state,
         list: state.list.filter(
-          listItem => listItem.createdAt !== action.payload.createdAt
+          listItem => listItem.uuid !== action.payload.uuid
         )
       };
 
