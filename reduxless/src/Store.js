@@ -1,4 +1,4 @@
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useReducer, useDebugValue } from "react";
 
 export const Store = createContext();
 
@@ -12,7 +12,7 @@ function reducer(state, action) {
       const newState = {
         ...state,
         list: state.list.concat({
-          createdAt: new Date().toString(),
+          createdAt: new Date().getMilliseconds().toString(),
           listItemValue: action.payload.listItemValue
         })
       };
@@ -35,6 +35,8 @@ function reducer(state, action) {
 
 export function StoreProvider(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
+
+  useDebugValue(state);
   const value = { state, dispatch };
 
   return <Store.Provider value={value}>{props.children}</Store.Provider>;

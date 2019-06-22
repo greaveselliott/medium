@@ -7,7 +7,7 @@ export const createNewListItem = ({ dispatch, payload }) => {
 
 export const deleteNewListItem = ({ dispatch, payload }) => {
   return dispatch({
-    type: "DELETE_NEW_LIST_ITEM",
+    type: "DELETE_LIST_ITEM",
     payload
   });
 };
