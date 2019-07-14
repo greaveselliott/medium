@@ -1,0 +1,9 @@
+{
+  "name": "medium",
+  "version": "1.0.0",
+  "description": "Colleciton of exercise files for my Medium articles",
+  "main": "index.js",
+  "repository": "https://github.com/greaveselliott/medium.git",
+  "author": "Elliott Greaves <greaveselliott@me.com>",
+  "license": "MIT"
+}

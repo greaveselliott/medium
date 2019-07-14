@@ -1,0 +1,40 @@
+{
+  "name": "performance-hooks",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "json-server": "^0.15.0",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "web-uuid-js": "^1.0.1"
+  },
+  "scripts": {
+    "start": "yarn start:client & yarn start:database",
+    "start:client": "react-scripts start",
+    "start:database": "json-server --watch ./database/database.json --port 3010 --static public",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}

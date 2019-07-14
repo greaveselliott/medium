@@ -1,0 +1,29 @@
+@import "./reset.scss";
+
+$color_1: #262626;
+$color_2: #bfbbbb;
+$color_positive: #7ebf9a;
+$color_negative: #d93654;
+
+$font-size: 16px;
+$line-height: 1.6em;
+
+$form-element-height: 56px;
+
+.app {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: $font-size;
+  line-height: $line-height;
+  margin: 2rem auto;
+  max-width: 768px;
+
+  &__title {
+    font-size: 3rem;
+    line-height: $line-height;
+
+    &:after {
+      content: ".";
+      color: $color_positive;
+    }
+  }
+}
