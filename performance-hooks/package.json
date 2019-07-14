@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "json-server": "^0.15.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -10,7 +11,9 @@
     "web-uuid-js": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "yarn start:client & yarn start:database",
+    "start:client": "react-scripts start",
+    "start:database": "json-server --watch ./database/database.json --port 3010 --static public",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
