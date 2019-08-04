@@ -10,7 +10,7 @@ Use React Hooks to write applications that benefit from Redux state management w
 <br>
 [Read about this project on Medium](https://link.medium.com/ZoVoc39BLX)
 
-### 2. [App Performance with useContext() and useMemo()](/performance-hooks)
+### 2. [App Performance with useCallback() and useMemo()](/performance-hooks)
 
 Improving the render performance of React Applications with useCallback and useMemo
 
