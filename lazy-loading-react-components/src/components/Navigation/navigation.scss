@@ -1,0 +1,34 @@
+$navigation-link-color: black;
+$navigation-link-color--hover: grey;
+$navigation-link-color--active: #555;
+
+.navigation {
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+
+  &__list-item {
+    flex: 1;
+  }
+
+  &__link {
+    color: $navigation-link-color;
+    display: block;
+    padding: 15px;
+    text-align: center;
+    border-top: solid 4px $navigation-link-color;
+    text-decoration: none;
+
+    &:hover {
+      border-color: $navigation-link-color--hover;
+      color: $navigation-link-color--hover;
+    }
+
+    &--active {
+      border-color: $navigation-link-color--active;
+      color: $navigation-link-color--active;
+    }
+  }
+}
