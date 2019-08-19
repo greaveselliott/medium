@@ -1,12 +1,18 @@
-$navigation-link-color: black;
-$navigation-link-color--hover: grey;
-$navigation-link-color--active: #555;
+@import "../../constants.scss";
+
+$navigation-link-font-size: 12px;
+$navigation-link-color: $shade-one;
+$navigation-link-color--hover: $shade-two;
+$navigation-link-color--active: $shade-two;
 
 .navigation {
   &__list {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__list-item {
@@ -14,20 +20,21 @@ $navigation-link-color--active: #555;
   }
 
   &__link {
+    @include font-sentance;
+
+    font-size: $navigation-link-font-size;
+    text-transform: uppercase;
     color: $navigation-link-color;
     display: block;
     padding: 15px;
     text-align: center;
-    border-top: solid 4px $navigation-link-color;
     text-decoration: none;
 
     &:hover {
-      border-color: $navigation-link-color--hover;
       color: $navigation-link-color--hover;
     }
 
     &--active {
-      border-color: $navigation-link-color--active;
       color: $navigation-link-color--active;
     }
   }

@@ -1,12 +1,27 @@
+@import "../../constants.scss";
+
+$page-heading-color: $shade-one;
+$page-heading-font-size: 40px;
+$page-heading-margin-bottom: $gutter-medium;
+
+$page-content-background-color: $shade-one;
+
 .page {
-  height: 100%;
+  height: calc(100% - 70px);
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &__heading {
-    font-size: 24px;
+    @include font-heading;
+
+    color: $page-heading-color;
+    font-size: $page-heading-font-size;
     margin-bottom: 20px;
+  }
+
+  &__content {
+    display: block;
   }
 }

@@ -1,0 +1,13 @@
+@mixin font-sentance {
+  font-family: "Open Sans", sans-serif;
+}
+
+@mixin font-heading {
+  font-family: "Abril Fatface", cursive;
+}
+
+$shade-one: #ffffff;
+$shade-two: #dedede;
+$shade-three: #454371;
+
+$gutter-medium: 20px;
