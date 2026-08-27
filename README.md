@@ -1,5 +1,11 @@
 # Medium
 
+> [!IMPORTANT]
+> This repository was archived on 27 August 2026. These examples accompany
+> articles published in 2019 and remain available as historical reference.
+> Dependencies are no longer maintained and no support or security updates are
+> provided.
+
 Repository containing samples for Medium articles I will publish.
 
 ## Table of Contents
